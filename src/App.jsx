@@ -2,9 +2,9 @@ import { Route, Routes } from 'react-router-dom';
 import Footer from './components/Footer.jsx';
 import Navbar from './components/Navbar.jsx';
 import Contact from './pages/Contact.jsx';
-import Feature from './pages/Feature.jsx';
 import Home from './pages/Home.jsx';
-import Product from './pages/Product.jsx';
+import Crew360 from './pages/Crew360.jsx';
+import AviationStaff from './pages/AviationStaff.jsx';
 
 export default function App() {
   return (
@@ -12,8 +12,9 @@ export default function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/product" element={<Product />} />
-        <Route path="/features" element={<Feature />} />
+        <Route path="/product" element={<Crew360 />} />
+        <Route path="/product/crew-360" element={<Crew360 />} />
+        <Route path="/product/staff-travel" element={<AviationStaff />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />

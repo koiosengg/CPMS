@@ -1,0 +1,38 @@
+import { NavLink } from "react-router-dom";
+import Banner1 from "../../assets/Home/Banner/Banner1.png";
+
+export default function Banner() {
+  return (
+    <section className="banner">
+      <div className="banner-inner">
+        <div className="banner-copy">
+          <p className="banner-pill">
+            <span />
+            Aviation Operations Platform
+          </p>
+          <h1>
+            <span className="heading-line">Real-Time Crew</span>
+            <span className="heading-line">
+              Management <span className="text-accent">for</span>
+            </span>
+            <span className="heading-line text-accent">Modern Airlines</span>
+          </h1>
+          <p className="banner-text">
+            Plan, assign, and monitor crew operations with full visibility.
+            Eliminate scheduling conflicts and improve operational efficiency
+            with a centralized platform.
+          </p>
+          <div className="banner-actions">
+            <NavLink className="hero-button primary" to="/contact">
+              Request Demo
+            </NavLink>
+          </div>
+        </div>
+
+        <div className="banner-media">
+          <img src={Banner1} alt="CPMS Banner" />
+        </div>
+      </div>
+    </section>
+  );
+}

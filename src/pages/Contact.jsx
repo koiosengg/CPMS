@@ -1,30 +1,27 @@
-import { BriefcaseBusiness, ChevronDown, Handshake, Headphones } from 'lucide-react';
-
-const serviceLabels = ['Label', 'Label', 'Label', 'Label'];
+import { BriefcaseBusiness, Handshake, Headphones } from "lucide-react";
 
 const contactChannels = [
   {
     icon: BriefcaseBusiness,
-    title: 'Sales and Business',
-    email: 'abcd1234@gmail.com',
+    title: "Sales and Business",
+    email: "abcd1234@gmail.com",
   },
   {
     icon: Handshake,
-    title: 'Partners',
-    email: 'partners1234@gmail.com',
+    title: "Partners",
+    email: "partners1234@gmail.com",
   },
   {
     icon: Headphones,
-    title: 'Customer Support',
-    email: 'support1234@gmail.com',
+    title: "Customer Support",
+    email: "support1234@gmail.com",
   },
 ];
 
 const faqs = Array.from({ length: 4 }, (_, index) => ({
   id: index + 1,
-  title: 'Lorem ipsum dolor sit amet consectetur.',
-  text:
-    'Lorem ipsum dolor sit amet consectetur. Sit fames magna nunc ornare turpis. Eget arcu mauris a cursus laoreet dolor vel. Nisl nisl et quam etiam. Nunc praesent quis bibendum elementum non lobortis. Ligula massa aliquet eget sodales aenean. Lorem egestas odio id nunc in. Luctus.',
+  title: "Lorem ipsum dolor sit amet consectetur.",
+  text: "Lorem ipsum dolor sit amet consectetur. Sit fames magna nunc ornare turpis. Eget arcu mauris a cursus laoreet dolor vel. Nisl nisl et quam etiam. Nunc praesent quis bibendum elementum non lobortis. Ligula massa aliquet eget sodales aenean. Lorem egestas odio id nunc in. Luctus.",
 }));
 
 export default function Contact() {
@@ -32,51 +29,33 @@ export default function Contact() {
     <main className="contact-page">
       <section className="contact-hero" aria-labelledby="contact-title">
         <div className="contact-hero-inner">
-          <p className="contact-pill">
-            <span aria-hidden="true" />
-            Get In Touch
-          </p>
-          <h1 id="contact-title">Contact Us</h1>
-          <p>
-            At FutureSphere our mission is to empower individuals and businesses through
-            innovative technology solutions that enrich lives, foster growth, and drive
-            positive change.
-          </p>
+          <div className="product-preview-heading">
+            <h1 id="contact-title">Contact Us</h1>
+            <span>
+              At FutureSphere our mission is to empower individuals and
+              businesses through innovative technology solutions that enrich
+              lives, foster growth, and drive positive change.
+            </span>
+          </div>
 
           <form className="contact-card">
             <div className="contact-form-grid">
               <label>
-                First Name
-                <input type="text" name="firstName" placeholder="John" />
-              </label>
-              <label>
-                Last Name
-                <input type="text" name="lastName" placeholder="Doe" />
+                Full Name
+                <input type="text" name="fullName" placeholder="John Doe" />
               </label>
               <label>
                 Email
-                <input type="email" name="email" placeholder="Johndoe@gmail.com" />
-              </label>
-              <label>
-                Subject
-                <input type="text" name="subject" placeholder="Lorem" />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Johndoe@gmail.com"
+                />
               </label>
             </div>
 
-            <fieldset className="service-fieldset">
-              <legend>Services</legend>
-              <div className="service-chip-row">
-                {serviceLabels.map((label, index) => (
-                  <label className="service-chip" key={`${label}-${index}`}>
-                    <input type="checkbox" name="services" value={`${label}-${index}`} />
-                    <span>{label}</span>
-                  </label>
-                ))}
-              </div>
-            </fieldset>
-
             <label className="message-label">
-              Messages
+              Message
               <textarea name="message" placeholder="Type here..." rows="7" />
             </label>
 
@@ -94,33 +73,6 @@ export default function Contact() {
               </article>
             ))}
           </div>
-        </div>
-      </section>
-
-      <section className="contact-faq-section" aria-labelledby="faq-title">
-        <div className="contact-faq-inner">
-          <div className="contact-faq-heading">
-            <p className="contact-section-kicker">FAQs</p>
-            <h2 id="faq-title">Answers to some of your questions</h2>
-            <span>
-              Don't find the answers you were looking for? Contact us at{' '}
-              <a href="mailto:cpms@gmail.com">cpms@gmail.com</a>.
-            </span>
-          </div>
-
-          <div className="faq-grid">
-            {faqs.map((faq) => (
-              <article className="faq-card" key={faq.id}>
-                <h3>{faq.title}</h3>
-                <p>{faq.text}</p>
-              </article>
-            ))}
-          </div>
-
-          <button className="faq-view-all" type="button">
-            View All
-            <ChevronDown size={16} strokeWidth={2} />
-          </button>
         </div>
       </section>
     </main>
