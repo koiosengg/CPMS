@@ -1,15 +1,11 @@
-import { NavLink } from 'react-router-dom';
-import Crew360Img from '../../assets/Crew360/Image.png';
+import { NavLink } from "react-router-dom";
+import Crew360Img from "../../assets/Crew360/Image.png";
 
 export default function Banner() {
   return (
     <section className="banner crew360-banner">
       <div className="banner-inner">
         <div className="banner-copy">
-          <p className="banner-pill">
-            <span />
-            Crew 360.PM.AI
-          </p>
           <h1>
             <span className="heading-line">AI-Powered</span>
             <span className="heading-line text-accent">Crew Performance &</span>

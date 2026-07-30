@@ -6,10 +6,6 @@ export default function Banner() {
     <section className="banner">
       <div className="banner-inner">
         <div className="banner-copy">
-          <p className="banner-pill">
-            <span />
-            Aviation Operations Platform
-          </p>
           <h1>
             <span className="heading-line">Real-Time Crew</span>
             <span className="heading-line">
