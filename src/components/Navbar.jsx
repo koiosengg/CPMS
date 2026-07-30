@@ -185,20 +185,6 @@ export default function Navbar() {
                 {isProductOpen && (
                   <div className="dropdown-menu">
                     <NavLink
-                      to="/product/staff-travel"
-                      className={({ isActive }) =>
-                        isActive ? "dropdown-item active" : "dropdown-item"
-                      }
-                      onClick={() => {
-                        setIsOpen(false);
-                      }}
-                    >
-                      <span className="dropdown-item-title">
-                        Aviation Staff Travel Solution
-                      </span>
-                    </NavLink>
-
-                    <NavLink
                       to="/product/crew-360"
                       className={({ isActive }) =>
                         isActive ? "dropdown-item active" : "dropdown-item"
@@ -209,6 +195,20 @@ export default function Navbar() {
                     >
                       <span className="dropdown-item-title">
                         Crew 360.pm.AI
+                      </span>
+                    </NavLink>
+
+                    <NavLink
+                      to="/product/staff-travel"
+                      className={({ isActive }) =>
+                        isActive ? "dropdown-item active" : "dropdown-item"
+                      }
+                      onClick={() => {
+                        setIsOpen(false);
+                      }}
+                    >
+                      <span className="dropdown-item-title">
+                        Aviation Staff Travel Solution
                       </span>
                     </NavLink>
                   </div>

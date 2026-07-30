@@ -220,6 +220,7 @@ textarea {
   align-items: center;
   display: flex;
   gap: 32px;
+  height: 100%;
   justify-self: center;
 }
 
@@ -238,6 +239,7 @@ textarea {
 .nav-dropdown-wrapper {
   align-items: center;
   display: inline-flex;
+  height: 100%;
   position: relative;
 }
 
@@ -293,9 +295,18 @@ textarea {
   min-width: 380px;
   padding: 10px;
   position: absolute;
-  top: calc(100% + 14px);
+  top: calc(100% + 15px);
   transform: translateX(-50%);
   z-index: 100;
+}
+
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: 0;
+  right: 0;
+  height: 16px;
 }
 
 @keyframes dropdownSlide {
@@ -2109,7 +2120,7 @@ h3 {
   flex-direction: column;
   gap: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-  border: 1px solid rgba(0, 0, 0, 0.04);
+  border: 1px solid #f1f5f9;
 }
 
 .feature-card-icon {
