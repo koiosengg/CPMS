@@ -1,7 +1,7 @@
 import GridSection from './GridSection';
-import img1 from '../../assets/Home/Insight/img1.png';
-import img2 from '../../assets/Home/Insight/img2.png';
-import img3 from '../../assets/Home/Insight/img3.png';
+import img1 from '../../assets/Home/Insight/img1.webp';
+import img2 from '../../assets/Home/Insight/img2.webp';
+import img3 from '../../assets/Home/Insight/img3.webp';
 
 const insightsData = [
   {

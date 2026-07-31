@@ -145,10 +145,6 @@ textarea {
   transform: rotate(-7deg) scale(1.05);
 }
 
-.nav-link:hover {
-  transform: translateY(-1px);
-}
-
 .nav-button:active,
 .hero-button:active {
   transform: translateY(0);
@@ -264,13 +260,6 @@ textarea {
   color: #0b3d83;
 }
 
-.dropdown-chevron {
-  color: #636363;
-  transition:
-    transform 200ms cubic-bezier(0.16, 1, 0.3, 1),
-    color 180ms ease;
-}
-
 .nav-dropdown-trigger:hover .dropdown-chevron,
 .nav-dropdown-trigger.active .dropdown-chevron {
   color: #0b3d83;
@@ -370,9 +359,9 @@ textarea {
 }
 
 .dropdown-item-title {
-  color: #0f172a;
-  font-size: 14px;
-  font-weight: 700;
+  color: #1b3478;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .dropdown-item-desc {
@@ -445,7 +434,7 @@ textarea {
 }
 
 .banner {
-  background: #082e52 url("./assets/Home/Banner/Banner.png") center / cover
+  background: #082e52 url("./assets/Home/Banner/Banner.webp") center / cover
     no-repeat;
   color: #ffffff;
   height: calc(100vh - 76px);
@@ -475,7 +464,7 @@ textarea {
 }
 
 .banner.staff-travel-banner {
-  background: #082e52 url("./assets/AviationStaff/Banner.png") center / cover
+  background: #082e52 url("./assets/AviationStaff/Banner.webp") center / cover
     no-repeat;
 }
 
@@ -551,7 +540,7 @@ h3 {
 
 .banner h1 {
   color: #ffffff;
-  font-size: clamp(42px, 5.2vw, 60px);
+  font-size: 60px;
   font-weight: 800;
   line-height: 0.98;
   margin: 0;
@@ -686,7 +675,7 @@ h3 {
 }
 
 #features .solution-image {
-  height: 265px;
+  max-height: 335px;
 }
 
 .solution-image img {
@@ -746,6 +735,37 @@ h3 {
   width: 100%;
 }
 
+.airline-choice-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.choice-header {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.choice-header h2 {
+  font-size: clamp(36px, 4vw, 48px);
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-grey-4, #0b0b0b);
+  font-style: normal;
+  line-height: normal;
+}
+
+.choice-header p {
+  color: #636363;
+  display: block;
+  font-size: 18px;
+  line-height: 1.5;
+  font-weight: 400;
+  max-width: 500px;
+  margin: 0;
+}
+
 .airline-choice-tabs {
   display: flex;
   gap: 4px;
@@ -785,7 +805,6 @@ h3 {
   background: #e6f7f9;
   border-bottom-color: #00a6bc;
   color: #00a6bc;
-  font-weight: 700;
 }
 
 .choice-cards-container {
@@ -798,7 +817,7 @@ h3 {
 
 .choice-list {
   display: grid;
-  gap: 16px;
+  gap: 20px;
   padding-top: 3px;
   max-width: 550px;
   width: 100%;
@@ -856,9 +875,10 @@ h3 {
 
 .roi-card-desc {
   color: #666666;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4;
   margin: 0;
+  font-weight: 400;
 }
 
 .roi-card-icon {
@@ -904,7 +924,7 @@ h3 {
 
 .metric-label {
   color: #414141;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 }
 
@@ -941,12 +961,12 @@ h3 {
 .approach-item {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
 }
 
 .approach-item p {
   color: #1e293b;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 600;
   margin: 0;
   line-height: 1.3;
@@ -963,13 +983,15 @@ h3 {
 }
 
 .approach-icon.muted {
-  background: #e2e8f0;
-  color: #64748b;
+  border-radius: 10px;
+  border: 1px solid var(--color-black-200, #929292);
+  background: var(--color-black-50, #e7e7e7);
 }
 
 .approach-icon.active {
-  background: #d0f4f8;
-  color: #00a6bc;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 170, 183, 0.2);
+  background: rgba(0, 170, 183, 0.1);
 }
 
 .airline-choice-inner {
@@ -1050,14 +1072,14 @@ h3 {
   border-radius: 50%;
   color: #00a6bc;
   display: inline-flex;
-  height: 30px;
+  height: 32px;
   justify-content: center;
-  width: 30px;
+  width: 32px;
 }
 
 .choice-list-item p {
   color: #111111;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 1.25;
   margin: 0;
@@ -1547,510 +1569,23 @@ h3 {
 
 .contact-channel p {
   color: #555555;
-  font-size: 12px;
+  font-size: 14px;
   margin: 0px;
 }
 
 .contact-channel a {
   color: #111111;
-  font-size: 14px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 500;
   line-height: 1.2;
   overflow-wrap: anywhere;
-}
-
-.choice-list-item:hover span {
-  transform: translateY(-2px) scale(1.04);
 }
 
 .footer-social-link:hover {
   transform: translateY(-2px);
 }
 
-.banner-media {
-  transition:
-    box-shadow 220ms ease,
-    transform 220ms ease;
-}
-
-@media (max-width: 1200px) {
-  .banner-inner {
-    gap: 48px;
-    flex-direction: column;
-  }
-
-  .banner h1 {
-    font-size: clamp(42px, 5vw, 56px);
-  }
-
-  .airline-choice-inner {
-    gap: 50px;
-    grid-template-columns: minmax(0, 1fr) minmax(380px, 1fr);
-  }
-
-  .product-preview {
-    padding: 48px 40px;
-  }
-
-  .product-preview-inner {
-    gap: 40px;
-  }
-
-  .solutions-grid.cols-2 {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .footer-main {
-    padding: 48px 40px;
-  }
-
-  header.navbar {
-    padding: 0 20px;
-  }
-
-  .navbar-inner {
-    display: flex;
-    height: 48px;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0;
-  }
-
-  .brand img {
-    width: 119px;
-    height: 24px;
-    aspect-ratio: 119 / 24;
-    object-fit: contain;
-  }
-
-  .mobile-menu-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-  }
-
-  .mobile-nav-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    height: 48px;
-    border-bottom: 1px solid #f0f0f0;
-    width: 100%;
-  }
-
-  .mobile-menu-close {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: transparent;
-    border: none;
-    padding: 0;
-    cursor: pointer;
-  }
-
-  .nav-links {
-    display: none;
-    gap: 0;
-  }
-
-  .nav-links.is-open {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    height: 100svh;
-    background: #ffffff;
-    z-index: 9999;
-    padding: 0;
-    gap: 0;
-    box-shadow: none;
-    border: none;
-    border-radius: 0;
-    overflow-y: auto;
-  }
-
-  .mobile-nav-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
-    width: 100%;
-    padding: 32px 20px;
-  }
-
-  .mobile-nav-list {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-  }
-
-  .mobile-nav-list > .nav-link,
-  .mobile-nav-list > .nav-link.active,
-  .nav-dropdown-trigger,
-  .nav-dropdown-trigger.active {
-    display: flex;
-    padding: 10px 0;
-    justify-content: space-between;
-    align-items: center;
-    align-self: stretch;
-    width: 100%;
-    background: transparent;
-    border: none;
-    font-size: 20px;
-    font-weight: 500;
-    color: #525252 !important;
-    cursor: pointer;
-    text-decoration: none;
-  }
-
-  .nav-dropdown-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-self: stretch;
-  }
-
-  .dropdown-menu {
-    animation: none !important;
-    transform: none !important;
-    left: auto !important;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 16px 0 0 0;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    position: static;
-    margin: 0;
-    width: 100%;
-    min-width: 0;
-  }
-
-  .dropdown-item {
-    padding: 0;
-    text-decoration: none;
-    background: transparent !important;
-  }
-
-  .dropdown-item-title {
-    font-size: 15px;
-    font-weight: 600;
-    color: #0d3878;
-  }
-
-  .mobile-nav-footer {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 32px;
-  }
-
-  .mobile-contact-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #1b3874;
-    color: #ffffff;
-    height: 48px;
-    border-radius: 8px;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    width: 100%;
-  }
-
-  .mobile-copyright {
-    text-align: center;
-    font-size: 12px;
-    color: #666666;
-    margin: 0;
-  }
-
-  .navbar-actions {
-    display: none;
-  }
-
-  .banner,
-  .banner.crew360-banner,
-  .banner.staff-travel-banner {
-    height: calc(100svh - 48px);
-    min-height: calc(100svh - 48px);
-    padding: 54.7px 20px 0 20px;
-  }
-
-  .banner-inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-    min-height: auto;
-    gap: 42px;
-    padding: 0;
-  }
-
-  .banner-copy {
-    padding: 0;
-    max-width: 100%;
-    width: 100%;
-    gap: 8px;
-  }
-
-  .banner h1 {
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-    letter-spacing: var(--letter-spacing--1_5, -1.5px);
-  }
-
-  .banner-text {
-    font-size: 14px;
-    margin-bottom: 16px;
-  }
-
-  .banner-actions {
-    display: flex;
-  }
-
-  .heading-line {
-    white-space: normal;
-  }
-
-  .banner-media {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 100%;
-    min-height: auto;
-    margin-top: auto;
-  }
-
-  .banner-media img {
-    width: 322px;
-    height: 322px;
-    padding: 4px;
-    border: 1px solid #00a5b5;
-    border-radius: 322px;
-    margin-bottom: -85px;
-  }
-
-  .feature-precision-section {
-    padding: 48px 40px;
-  }
-
-  .feature-precision-grid {
-    grid-template-columns: repeat(1, 1fr) !important;
-    gap: 20px;
-  }
-}
-
-@media (max-width: 768px) {
-  .product-preview {
-    padding: 48px 20px;
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .product-preview-inner {
-    gap: 40px;
-  }
-
-  .product-preview-heading {
-    gap: 8px;
-  }
-
-  .product-preview-heading h2,
-  .product-preview-heading h1 {
-    font-size: 28px;
-  }
-
-  .product-preview-heading span {
-    font-size: 14px;
-  }
-
-  .feature-precision-section {
-    padding: 48px 20px;
-  }
-
-  .feature-section-inner {
-    gap: 40px;
-  }
-
-  .feature-section-heading {
-    gap: 8px;
-  }
-
-  .feature-section-heading h2 {
-    font-size: 28px;
-  }
-
-  .feature-section-heading span {
-    font-size: 14px;
-  }
-
-  .feature-precision-grid {
-    grid-template-columns: repeat(1, 1fr) !important;
-    gap: 16px;
-  }
-
-  .solutions-grid.cols-2,
-  .solutions-grid.cols-3,
-  .solutions-grid.cols-4 {
-    grid-template-columns: 1fr;
-  }
-
-  #features .solutions-grid {
-    gap: 40px;
-  }
-
-  #insights .solutions-grid {
-    display: flex;
-    flex-direction: row;
-    grid-template-columns: none;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    gap: 16px;
-    padding-bottom: 12px;
-    cursor: grab;
-    user-select: none;
-    scrollbar-width: none;
-  }
-
-  #insights .solutions-grid::-webkit-scrollbar {
-    display: none;
-  }
-
-  #insights .solutions-grid.dragging {
-    cursor: grabbing;
-    scroll-snap-type: none;
-  }
-
-  #insights .solution-card {
-    flex: 0 0 303px;
-    max-width: 303px;
-    width: 303px;
-    scroll-snap-align: start;
-  }
-
-  .airline-choice-inner {
-    gap: 42px;
-    grid-template-columns: 1fr;
-    padding: 64px 24px 88px;
-  }
-
-  .airline-choice-copy h2 {
-    max-width: 640px;
-  }
-
-  .footer-cta-inner {
-    min-height: 340px;
-    padding-bottom: 62px;
-  }
-
-  .footer-main {
-    padding: 48px 20px;
-  }
-
-  .footer-top {
-    flex-direction: column;
-    gap: 40px;
-    align-items: flex-start;
-  }
-
-  .footer-brand-block {
-    max-width: 100%;
-  }
-
-  .footer-links {
-    flex-direction: column;
-    gap: 8px;
-    width: 100%;
-  }
-
-  .footer-bottom {
-    flex-direction: row;
-    gap: 20px;
-    align-items: flex-start;
-    margin-top: 40px;
-  }
-
-  .product-hero-inner {
-    min-height: auto;
-    padding-top: 82px;
-  }
-
-  .product-hero-preview {
-    margin-top: 88px;
-  }
-
-  .product-system-inner {
-    gap: 42px;
-    grid-template-columns: 1fr;
-    padding: 64px 24px 72px;
-  }
-
-  .workflow-card {
-    width: 100%;
-  }
-
-  .product-modules-inner {
-    padding: 72px 24px 92px;
-  }
-
-  .product-modules-showcase {
-    grid-template-columns: 1fr;
-  }
-
-  .module-list {
-    gap: 14px;
-  }
-
-  .module-detail-preview {
-    min-height: 260px;
-  }
-
-  .product-integrations-inner {
-    gap: 42px;
-    grid-template-columns: 1fr;
-    padding: 64px 24px 72px;
-  }
-
-  .integration-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .product-efficiency-inner {
-    padding: 68px 24px 88px;
-  }
-
-  .efficiency-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .feature-hero-inner {
-    min-height: auto;
-    padding: 74px 24px 82px;
-  }
-
-  .feature-section-inner {
-    padding: 0px;
-  }
-}
-
-/* Feature Precision Section */
+/* Feature Precision Section Base */
 .feature-precision-section {
   background: rgba(235, 235, 235, 0.3);
   display: flex;
@@ -2127,14 +1662,14 @@ h3 {
   align-items: center;
   border-radius: 10px;
   display: inline-flex;
-  height: 56px;
+  height: 40px;
   justify-content: center;
-  width: 56px;
+  width: 40px;
 }
 
 .feature-card-icon svg {
-  width: 36px;
-  height: 36px;
+  width: 24px;
+  height: 24px;
 }
 
 .feature-card-icon.tone-blue {
@@ -2149,16 +1684,22 @@ h3 {
   background: rgba(0, 170, 183, 0.1);
 }
 
+.feature-precision-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .feature-precision-card h3 {
-  color: #111111;
+  color: #1a1b21;
   font-size: 18px;
   font-weight: 700;
   line-height: 1.25;
-  margin: 12px 0 0 0;
+  margin: 0;
 }
 
 .feature-precision-card p {
-  color: #666666;
+  color: #555555;
   font-size: 14px;
   line-height: 1.5;
   margin: 0;
@@ -2170,13 +1711,13 @@ h3 {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .feature-precision-card li {
-  color: #333333;
-  font-size: 13px;
-  font-weight: 600;
+  color: #525252;
+  font-size: 16px;
+  font-weight: 400;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -2191,7 +1732,6 @@ h3 {
   background-color: #00a6bc;
   flex-shrink: 0;
 }
-
 /* Staff System Overview Section */
 .staff-overview-section {
   background: #ffffff;
@@ -2207,9 +1747,17 @@ h3 {
   width: 100%;
   align-items: center;
   justify-content: space-between;
+  gap: 48px;
 }
 
-.staff-overview-section .product-system-copy {
+.product-system-copy-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.product-system-header,
+.product-system-body {
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -2226,7 +1774,7 @@ h3 {
   margin: 0;
 }
 
-.staff-overview-section .product-system-copy h2 {
+.staff-overview-section .product-system-header h2 {
   font-size: clamp(36px, 4vw, 48px);
   font-weight: 700;
   line-height: 1.1;
@@ -2234,16 +1782,14 @@ h3 {
   color: #0b0b0b;
 }
 
-.staff-overview-section .product-system-copy h2 span {
+.staff-overview-section .product-system-header h2 span {
   display: block;
 }
 
-.staff-overview-section
-  .product-system-copy
-  p:not(.product-preview-heading-kicker):not(.product-section-kicker) {
-  color: #666666;
-  font-size: 15px;
-  line-height: 1.6;
+.staff-overview-section .product-system-body p {
+  color: #525252;
+  font-size: 18px;
+  line-height: normal;
   margin: 0;
 }
 
@@ -2254,12 +1800,13 @@ h3 {
   color: #003f6c;
   cursor: pointer;
   display: inline-flex;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
-  gap: 6px;
+  gap: 4px;
   padding: 0;
-  margin-top: 8px;
   width: fit-content;
+  align-items: center;
+  justify-content: center;
 }
 
 .read-more-btn:hover {
@@ -2384,4 +1931,907 @@ h3 {
   color: #888888;
   font-size: 12px;
   margin: 16px 0 0;
+}
+
+@media (max-width: 1200px) {
+  .feature-precision-card-content {
+    gap: 8px;
+  }
+
+  .banner-inner,
+  .banner.crew360-banner .banner-inner,
+  .banner.staff-travel-banner .banner-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .banner-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    max-width: 525px;
+    width: 100%;
+    gap: 24px;
+    padding: 0;
+  }
+
+  .banner.crew360-banner .banner-copy,
+  .banner.staff-travel-banner .banner-copy {
+    max-width: 625px;
+    width: 100%;
+  }
+
+  .banner.staff-travel-banner {
+    height: auto;
+    min-height: calc(100vh - 76px);
+    padding: 80px 40px 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .airline-choice-section {
+    padding: 48px 20px;
+  }
+
+  .airline-choice-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .airline-choice-container {
+    gap: 32px;
+  }
+  .airline-choice-copy,
+  .choice-header {
+    gap: 8px;
+    text-align: center;
+    align-items: center;
+  }
+  .airline-choice-copy,
+  .choice-list,
+  .choice-cards-container,
+  .choice-list-item,
+  .roi-card,
+  .approaches-card {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .staff-overview-section {
+    padding: 48px 20px;
+  }
+
+  .staff-overview-section .product-system-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .product-system-copy-container {
+    display: contents;
+  }
+
+  .product-system-header {
+    order: 1;
+    text-align: center;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .staff-overview-section .product-system-header h2 {
+    text-align: center;
+  }
+  .staff-overview-section .product-system-body p {
+    font-size: 16px;
+    line-height: normal;
+  }
+  .staff-overview-image-wrapper {
+    order: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .staff-overview-image {
+    width: 100%;
+    max-width: 556px;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .product-system-body {
+    order: 3;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .contact-hero {
+    padding: 64px 40px;
+  }
+
+  .contact-card {
+    padding: 32px;
+  }
+
+  .contact-channel-strip {
+    grid-template-columns: 1fr;
+    gap: 56px;
+    padding: 24 px;
+    border-radius: 12px;
+  }
+  .contact-channel-icon {
+    height: 32px;
+    width: 32px;
+  }
+  .contact-channel p {
+    font-size: 14px;
+  }
+  .contact-channel a {
+    font-size: 18px;
+  }
+  .product-preview {
+    padding: 48px 20px;
+  }
+
+  .product-preview-inner {
+    gap: 40px;
+  }
+
+  .solutions-grid.cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .solution-image img {
+    object-fit: contain;
+  }
+  .solution-card {
+    align-items: center;
+    text-align: center;
+  }
+
+  .solution-content p {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .footer-main {
+    padding: 48px 40px;
+  }
+
+  header.navbar {
+    padding: 0 20px;
+  }
+
+  .navbar-inner {
+    display: flex;
+    height: 48px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .brand img {
+    width: 119px;
+    height: 24px;
+    aspect-ratio: 119 / 24;
+    object-fit: contain;
+  }
+
+  .mobile-menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .mobile-nav-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 48px;
+    border-bottom: 1px solid #f0f0f0;
+    width: 100%;
+  }
+
+  .mobile-menu-close {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    gap: 0;
+  }
+
+  .nav-links.is-open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100svh;
+    background: #ffffff;
+    z-index: 9999;
+    padding: 0;
+    gap: 0;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    overflow-y: auto;
+  }
+
+  .mobile-nav-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
+    padding: 32px 20px;
+  }
+
+  .mobile-nav-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .mobile-nav-list > .nav-link,
+  .mobile-nav-list > .nav-link.active,
+  .nav-dropdown-trigger,
+  .nav-dropdown-trigger.active {
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    width: 100%;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #525252 !important;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .feature-precision-card h3,
+  .feature-precision-card p {
+    font-size: 16px;
+  }
+  .nav-dropdown-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-self: stretch;
+  }
+
+  .dropdown-menu {
+    animation: none !important;
+    transform: none !important;
+    left: auto !important;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 0 0 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    position: static;
+    margin: 0;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .dropdown-item {
+    padding: 0;
+    text-decoration: none;
+    background: transparent !important;
+  }
+
+  .dropdown-item-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #0d3878;
+  }
+
+  .mobile-nav-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+  }
+
+  .mobile-contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1b3874;
+    color: #ffffff;
+    height: 48px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    width: 100%;
+  }
+
+  .mobile-copyright {
+    text-align: center;
+    font-size: 12px;
+    color: #666666;
+    margin: 0;
+  }
+
+  .navbar-actions {
+    display: none;
+  }
+
+  .banner,
+  .banner.crew360-banner,
+  .banner.staff-travel-banner {
+    height: calc(100svh - 48px);
+    min-height: calc(100svh - 48px);
+  }
+
+  .banner {
+    padding: 54.7px 20px 0 20px;
+  }
+
+  .banner.staff-travel-banner {
+    padding: 54.7px 20px 40px 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  .banner.staff-travel-banner .banner-inner {
+    height: 100%;
+    min-height: auto;
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+
+  .banner.staff-travel-banner .banner-copy {
+    width: 100%;
+    max-width: 100%;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
+
+  .banner.crew360-banner {
+    padding: 54.7px 20px 0 20px;
+  }
+
+  .banner.crew360-banner .banner-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: auto;
+    gap: 20px;
+    padding: 0;
+    align-items: center;
+  }
+
+  .banner.crew360-banner .banner-copy {
+    text-align: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .banner-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    min-height: auto;
+    gap: 42px;
+    padding: 0;
+  }
+
+  .banner-copy {
+    padding: 0;
+    max-width: 100%;
+    width: 100%;
+    gap: 16px;
+  }
+  .banner h1 {
+    width: 100%;
+    max-width: none;
+  }
+  .banner-actions {
+    display: flex;
+  }
+
+  .heading-line {
+    white-space: normal;
+  }
+
+  .feature-precision-section {
+    padding: 48px 20px;
+  }
+
+  .feature-precision-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 20px;
+  }
+  .feature-precision-card li {
+    font-size: 16px;
+  }
+  .footer-brand-block p {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-inner,
+  .banner.crew360-banner .banner-inner,
+  .banner.staff-travel-banner .banner-inner {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: start;
+  }
+
+  .banner-copy,
+  .banner.crew360-banner .banner-copy,
+  .banner.staff-travel-banner .banner-copy {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: start;
+    gap: 8px;
+  }
+
+  .banner-media,
+  .banner.crew360-banner .banner-media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .banner-media img,
+  .banner.crew360-banner .banner-media img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    object-fit: contain;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  .product-preview {
+    padding: 48px 20px;
+    flex-direction: column;
+    gap: 40px;
+  }
+  .banner.crew360-banner .banner-media {
+    margin-top: auto;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .banner.crew360-banner .banner-media img {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    margin: 0 auto;
+    padding: 0;
+    object-fit: contain;
+  }
+  .banner-media {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    min-height: auto;
+    margin-top: auto;
+  }
+
+  .banner-media img {
+    width: 322px;
+    height: 322px;
+    padding: 4px;
+    border: 1px solid #00a5b5;
+    border-radius: 322px;
+    margin-bottom: -85px;
+  }
+  .product-preview-inner {
+    gap: 40px;
+  }
+
+  .product-preview-heading {
+    gap: 8px;
+  }
+
+  .product-preview-heading h2,
+  .product-preview-heading h1 {
+    font-size: 28px;
+  }
+
+  .product-preview-heading span {
+    font-size: 14px;
+  }
+
+  .feature-precision-section {
+    padding: 48px 20px;
+  }
+
+  .feature-precision-card {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  .feature-precision-card li {
+    font-size: 16px;
+  }
+
+  .feature-section-inner {
+    gap: 40px;
+  }
+
+  .feature-section-heading {
+    gap: 8px;
+  }
+
+  .feature-section-heading h2 {
+    font-size: 28px;
+  }
+
+  .feature-section-heading span {
+    font-size: 14px;
+  }
+
+  .feature-precision-grid {
+    grid-template-columns: repeat(1, 1fr) !important;
+    gap: 16px;
+  }
+
+  .solutions-grid.cols-2,
+  .solutions-grid.cols-3,
+  .solutions-grid.cols-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-card {
+    align-items: flex-start;
+    text-align: start;
+  }
+
+  .solution-content p {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .banner h1 {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: var(--letter-spacing--1_5, -1.5px);
+  }
+  .banner-text {
+    font-size: 14px;
+    margin-bottom: 16px;
+    max-width: 400px;
+    width: 100%;
+  }
+  .metrics-three-col {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .approaches-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  #features .solutions-grid {
+    gap: 40px;
+  }
+
+  #insights .solutions-grid {
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: none;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 16px;
+    padding-bottom: 12px;
+    cursor: grab;
+    user-select: none;
+    scrollbar-width: none;
+  }
+
+  #insights .solutions-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  #insights .solutions-grid.dragging {
+    cursor: grabbing;
+    scroll-snap-type: none;
+  }
+
+  #insights .solution-card {
+    flex: 0 0 303px;
+    max-width: 303px;
+    width: 303px;
+    scroll-snap-align: start;
+  }
+
+  .airline-choice-section {
+    padding: 48px 20px;
+  }
+
+  .airline-choice-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+    max-width: 100%;
+    scrollbar-width: none;
+    cursor: grab;
+    user-select: none;
+  }
+
+  .airline-choice-tabs.dragging {
+    cursor: grabbing;
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+
+  .airline-choice-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .airline-choice-tab {
+    white-space: nowrap;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+    font-size: 16px;
+    padding: 10px 8px;
+  }
+
+  .choice-header h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .choice-header p,
+  .airline-choice-copy p:not(.choice-kicker) {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .choice-list-item {
+    padding: 12px 16px;
+    min-height: 52px;
+  }
+
+  .metrics-three-col {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 12px;
+  }
+
+  .metric-label {
+    font-size: 12px;
+  }
+
+  .metric-value {
+    font-size: 16px;
+  }
+
+  .airline-choice-copy h2 {
+    max-width: 640px;
+  }
+
+  .staff-overview-section {
+    padding: 48px 20px;
+  }
+
+  .staff-overview-section .product-system-inner {
+    gap: 32px;
+  }
+
+  .staff-overview-section .product-system-header h2 {
+    font-size: 28px;
+  }
+
+  .staff-overview-section .product-system-header h2 span {
+    display: block;
+  }
+
+  .product-section-kicker,
+  .product-preview-heading-kicker {
+    font-size: 12px;
+  }
+
+  .staff-overview-image {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .contact-hero {
+    padding: 48px 20px;
+  }
+
+  .contact-hero-inner {
+    gap: 48px;
+  }
+
+  .contact-hero h1 {
+    font-size: 28px;
+  }
+  .contact-card {
+    padding: 40px 20px;
+    gap: 16px;
+    border-radius: 12px;
+  }
+
+  .contact-card label {
+    font-size: 14px;
+    gap: 8px;
+  }
+
+  .contact-card input,
+  .contact-card textarea {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .contact-card textarea {
+    min-height: 120px;
+  }
+
+  .contact-card button {
+    font-size: 16px;
+    padding: 0px 12px;
+  }
+
+  .contact-channel:not(:last-child)::after {
+    display: none;
+  }
+
+  .contact-channel {
+    gap: 20px;
+  }
+
+  .contact-channel:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .footer-cta-inner {
+    min-height: 340px;
+    padding-bottom: 62px;
+  }
+
+  .footer-main {
+    padding: 48px 20px;
+  }
+
+  .footer-top {
+    flex-direction: column;
+    gap: 40px;
+    align-items: flex-start;
+  }
+
+  .footer-brand-block {
+    max-width: 100%;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    gap: 20px;
+    align-items: flex-start;
+    margin-top: 40px;
+  }
+
+  .product-hero-inner {
+    min-height: auto;
+    padding-top: 82px;
+  }
+
+  .product-hero-preview {
+    margin-top: 88px;
+  }
+
+  .product-system-inner {
+    gap: 42px;
+    grid-template-columns: 1fr;
+  }
+
+  .workflow-card {
+    width: 100%;
+  }
+
+  .product-modules-inner {
+    padding: 72px 24px 92px;
+  }
+
+  .product-modules-showcase {
+    grid-template-columns: 1fr;
+  }
+
+  .module-list {
+    gap: 14px;
+  }
+
+  .module-detail-preview {
+    min-height: 260px;
+  }
+
+  .product-integrations-inner {
+    gap: 42px;
+    grid-template-columns: 1fr;
+    padding: 64px 24px 72px;
+  }
+
+  .integration-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .product-efficiency-inner {
+    padding: 68px 24px 88px;
+  }
+
+  .efficiency-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .feature-hero-inner {
+    min-height: auto;
+    padding: 74px 24px 82px;
+  }
+  .feature-precision-section {
+    padding: 36px 16px;
+  }
 }

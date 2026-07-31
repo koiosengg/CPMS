@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import FooterLogo from "../assets/Footer/Logo.png";
+import FooterLogo from "../assets/Footer/Logo.webp";
 
 const footerLinks = [
   [
@@ -112,7 +112,7 @@ export default function Footer() {
           <div className="footer-top">
             <div className="footer-brand-block">
               <NavLink className="footer-brand" to="/">
-                <img src={FooterLogo} alt="logo" />
+                <img src={FooterLogo} alt="CPMS Footer Logo" />
               </NavLink>
               <p>
                 Crew Planning & Management System. The modern operations

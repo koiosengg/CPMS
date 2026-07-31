@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { ChevronDown, ChevronUp, X } from "lucide-react";
-import Logo from "../assets/Navbar/Logo.png";
+import Logo from "../assets/Navbar/Logo.webp";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -71,7 +71,7 @@ export default function Navbar() {
     <header className={`navbar ${isOpen ? "is-menu-open" : ""}`}>
       <div className="navbar-inner">
         <NavLink className="brand" to="/" onClick={() => setIsOpen(false)}>
-          <img src={Logo} alt="logo" />
+          <img src={Logo} alt="CPMS Logo" />
         </NavLink>
 
         <button
@@ -107,7 +107,7 @@ export default function Navbar() {
         >
           <div className="mobile-nav-top">
             <NavLink className="brand" to="/" onClick={() => setIsOpen(false)}>
-              <img src={Logo} alt="logo" />
+              <img src={Logo} alt="CPMS Logo" />
             </NavLink>
             <button
               className="mobile-menu-close"

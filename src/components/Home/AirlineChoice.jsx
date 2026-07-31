@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   CheckCircle2,
   TrendingUp,
@@ -85,15 +85,47 @@ export default function AirlineChoice({
   statLabel = "Reduction in scheduling time",
 }) {
   const [activeTabId, setActiveTabId] = useState("roi");
+  const tabsRef = useRef(null);
+  const [isMouseDown, setIsMouseDown] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e) => {
+    if (!tabsRef.current) return;
+    setIsMouseDown(true);
+    setStartX(e.pageX - tabsRef.current.offsetLeft);
+    setScrollLeft(tabsRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsMouseDown(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsMouseDown(false);
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isMouseDown || !tabsRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - tabsRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    tabsRef.current.scrollLeft = scrollLeft - walk;
+  };
 
   return (
     <section className="airline-choice-section" id="solutions">
       <div className="airline-choice-container">
         {/* Navigation Tabs */}
         <div
-          className="airline-choice-tabs"
+          ref={tabsRef}
+          className={`airline-choice-tabs ${isMouseDown ? "dragging" : ""}`}
           role="tablist"
           aria-label="Solution tabs"
+          onMouseDown={handleMouseDown}
+          onMouseLeave={handleMouseLeave}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
         >
           <button
             role="tab"

@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Banner1 from "../../assets/Home/Banner/Banner1.png";
+import Banner1 from "../../assets/Home/Banner/Banner1.webp";
 
 export default function Banner() {
   return (
@@ -26,7 +26,7 @@ export default function Banner() {
         </div>
 
         <div className="banner-media">
-          <img src={Banner1} alt="CPMS Banner" />
+          <img src={Banner1} alt="Aviation Operations Banner" />
         </div>
       </div>
     </section>

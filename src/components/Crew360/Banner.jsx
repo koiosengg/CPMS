@@ -1,5 +1,5 @@
 import { NavLink } from "react-router-dom";
-import Crew360Img from "../../assets/Crew360/Image.png";
+import Crew360Img from "../../assets/Crew360/Image.webp";
 
 export default function Banner() {
   return (
@@ -24,7 +24,7 @@ export default function Banner() {
         </div>
 
         <div className="banner-media">
-          <img src={Crew360Img} alt="Crew 360.PM.AI Banner" />
+          <img src={Crew360Img} alt="Crew Performance Management Banner" />
         </div>
       </div>
     </section>

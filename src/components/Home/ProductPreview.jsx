@@ -1,8 +1,8 @@
 import GridSection from './GridSection';
-import aviation1 from '../../assets/Home/Aviation/1.png';
-import aviation2 from '../../assets/Home/Aviation/2.png';
-import aviation3 from '../../assets/Home/Aviation/3.png';
-import aviation4 from '../../assets/Home/Aviation/4.png';
+import aviation1 from '../../assets/Home/Aviation/1.webp';
+import aviation2 from '../../assets/Home/Aviation/2.webp';
+import aviation3 from '../../assets/Home/Aviation/3.webp';
+import aviation4 from '../../assets/Home/Aviation/4.webp';
 
 const solutions = [
   {

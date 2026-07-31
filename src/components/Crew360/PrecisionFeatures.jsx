@@ -258,15 +258,17 @@ function FeatureCard({ feature }) {
       >
         <IconComponent size={16} />
       </span>
-      <h3>{feature.title}</h3>
-      {feature.text && <p>{feature.text}</p>}
-      {feature.bullets && feature.bullets.length > 0 && (
-        <ul>
-          {feature.bullets.map((bullet) => (
-            <li key={bullet}>{bullet}</li>
-          ))}
-        </ul>
-      )}
+      <div className="feature-precision-card-content">
+        <h3>{feature.title}</h3>
+        {feature.text && <p>{feature.text}</p>}
+        {feature.bullets && feature.bullets.length > 0 && (
+          <ul>
+            {feature.bullets.map((bullet) => (
+              <li key={bullet}>{bullet}</li>
+            ))}
+          </ul>
+        )}
+      </div>
     </article>
   );
 }
