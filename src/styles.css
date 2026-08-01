@@ -992,12 +992,12 @@ h3 {
   border-radius: 10px;
   border: 1px solid rgba(0, 170, 183, 0.2);
   background: rgba(0, 170, 183, 0.1);
-  color: #00A5B5;
+  color: #00a5b5;
 }
 
 .approach-icon.active svg {
-  color: #00A5B5;
-  stroke: #00A5B5;
+  color: #00a5b5;
+  stroke: #00a5b5;
 }
 
 .airline-choice-inner {
@@ -1593,7 +1593,7 @@ h3 {
 
 /* Feature Precision Section Base */
 .feature-precision-section {
-  background: rgba(235, 235, 235, 0.30);
+  background: rgba(235, 235, 235, 0.3);
   display: flex;
   justify-content: center;
   padding: 80px 20px;
@@ -1831,7 +1831,8 @@ h3 {
 .expandable-content {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+  transition:
+    grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1),
     opacity 0.3s ease,
     margin-top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
@@ -2193,6 +2194,8 @@ h3 {
     border: none;
     padding: 0;
     cursor: pointer;
+    width: 40px;
+    height: 40px;
   }
 
   .nav-links {
