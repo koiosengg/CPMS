@@ -239,7 +239,7 @@ function PurposeIcon4() {
 const defaultFeatures = [
   {
     icon: Icon1,
-    tone: "cyan",
+    tone: "blue",
     title: "Crew Administration",
     bullets: ["Personal Files", "Task Management", "Absence Management"],
   },
@@ -266,7 +266,7 @@ const defaultFeatures = [
 export const purposeBuiltFeatures = [
   {
     icon: PurposeIcon1,
-    tone: "cyan",
+    tone: "blue",
     title: "Real-Time Performance Visibility",
     bullets: [
       "Capture performance inputs from every flight",
@@ -276,7 +276,7 @@ export const purposeBuiltFeatures = [
   },
   {
     icon: PurposeIcon2,
-    tone: "blue",
+    tone: "cyan",
     title: "Continuous Feedback Loop",
     bullets: [
       "Real-time feedback from supervisors",
@@ -286,7 +286,7 @@ export const purposeBuiltFeatures = [
   },
   {
     icon: PurposeIcon3,
-    tone: "cyan",
+    tone: "blue",
     title: "Manager-Crew Engagement",
     bullets: [
       "Regular digital touchpoints",
@@ -297,7 +297,7 @@ export const purposeBuiltFeatures = [
   },
   {
     icon: PurposeIcon4,
-    tone: "blue",
+    tone: "cyan",
     title: "Data-Driven Insights",
     bullets: [
       "Performance trends & analytics",

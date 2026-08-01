@@ -167,8 +167,8 @@ export default function AirlineChoice({
               <div className="choice-header">
                 <h2>ROI - Performance That Speaks for Itself</h2>
                 <p>
-                  Discover measurable outcomes that showcase how our
-                  intelligent platform enhance
+                  Discover measurable outcomes that showcase how our intelligent
+                  platform enhance
                 </p>
               </div>
 
@@ -192,7 +192,7 @@ export default function AirlineChoice({
               ].map((reason) => (
                 <div className="choice-list-item" key={reason}>
                   <span aria-hidden="true">
-                    <CheckCircle2 size={16} strokeWidth={2.5} />
+                    <CheckCircle2 size={24} strokeWidth={2.5} />
                   </span>
                   <p>{reason}</p>
                 </div>

@@ -1078,9 +1078,9 @@ h3 {
   border-radius: 50%;
   color: #00a6bc;
   display: inline-flex;
-  height: 32px;
+  height: 40px;
   justify-content: center;
-  width: 32px;
+  width: 40px;
 }
 
 .choice-list-item p {
@@ -1556,21 +1556,24 @@ h3 {
 
 .contact-channel-icon {
   align-items: center;
-  background: #e9fbff;
-  border: 1px solid #8ce0eb;
-  border-radius: 11px;
-  color: #08a8be;
+  background: rgba(0, 170, 183, 0.1);
+  border: 1px solid rgba(0, 170, 183, 0.2);
+  border-radius: 10px;
   display: inline-flex;
-  height: 36px;
+  height: 48px;
   justify-content: center;
-  width: 36px;
+  width: 48px;
 }
 
 .contact-channel-icon svg {
-  width: 16px;
-  height: 16px;
+  width: 32px;
+  height: 32px;
   flex-shrink: 0;
   aspect-ratio: 1 / 1;
+}
+
+.contact-channel-icon svg path {
+  fill: #00A5B5 !important;
 }
 
 .contact-channel p {
@@ -1593,9 +1596,9 @@ h3 {
 
 /* Feature Precision Section Base */
 .feature-precision-section {
-  background: #EEF2F6;
-  border-top: 1px solid #E0E6ED;
-  border-bottom: 1px solid #E0E6ED;
+  background: #eef2f6;
+  border-top: 1px solid #e0e6ed;
+  border-bottom: 1px solid #e0e6ed;
   display: flex;
   justify-content: center;
   padding: 80px 20px;
@@ -1672,14 +1675,14 @@ h3 {
   align-items: center;
   border-radius: 10px;
   display: inline-flex;
-  height: 40px;
+  height: 48px;
   justify-content: center;
-  width: 40px;
+  width: 48px;
 }
 
 .feature-card-icon svg {
-  width: 24px;
-  height: 24px;
+  width: 32px;
+  height: 32px;
 }
 
 .feature-card-icon.tone-blue {
