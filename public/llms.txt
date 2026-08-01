@@ -1,0 +1,14 @@
+# CREW 360 & MyStaffTravel
+
+> Modern airline crew performance management and employee staff travel platform.
+
+CREW 360 provides software solutions designed for modern aviation operations, connecting cabin crew, supervisors, and airline leadership with real-time insights, flight evaluations, and automated staff travel privileges.
+
+## Product Solutions
+- [Crew 360](https://www.crew360.ai/product/crew-360): Real-time flight evaluations, performance analytics, and cabin crew management.
+- [MyStaffTravel](https://www.crew360.ai/product/staff-travel): Configurable airline employee staff travel portal, approval workflows, and eligibility tracking.
+
+## Pages
+- [Home](https://www.crew360.ai/): Overview of CREW 360 aviation solutions.
+- [Contact Us](https://www.crew360.ai/contact): Get in touch with our airline solution specialists.
+- [Privacy Policy](https://www.crew360.ai/privacy-policy): Privacy & compliance policies.

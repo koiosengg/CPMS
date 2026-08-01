@@ -1,3 +1,6 @@
+import SEO from "../components/SEO";
+import { ContactPageStructuredData } from "../structured-data";
+
 const SalesIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
     <mask id="mask0_3180_16919" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
@@ -49,63 +52,64 @@ const contactChannels = [
   },
 ];
 
-const faqs = Array.from({ length: 4 }, (_, index) => ({
-  id: index + 1,
-  title: "Lorem ipsum dolor sit amet consectetur.",
-  text: "Lorem ipsum dolor sit amet consectetur. Sit fames magna nunc ornare turpis. Eget arcu mauris a cursus laoreet dolor vel. Nisl nisl et quam etiam. Nunc praesent quis bibendum elementum non lobortis. Ligula massa aliquet eget sodales aenean. Lorem egestas odio id nunc in. Luctus.",
-}));
-
 export default function Contact() {
   return (
-    <main className="contact-page">
-      <section className="contact-hero" aria-labelledby="contact-title">
-        <div className="contact-hero-inner">
-          <div className="product-preview-heading">
-            <h1 id="contact-title">Contact Us</h1>
-            <span>
-              At FutureSphere our mission is to empower individuals and
-              businesses through innovative technology solutions that enrich
-              lives, foster growth, and drive positive change.
-            </span>
+    <>
+      <SEO
+        title="Contact Us"
+        description="Get in touch with the CREW 360 team for sales, partnership, or customer support inquiries regarding airline crew and staff travel solutions."
+      />
+      <ContactPageStructuredData />
+      <main className="contact-page">
+        <section className="contact-hero" aria-labelledby="contact-title">
+          <div className="contact-hero-inner">
+            <div className="product-preview-heading">
+              <h1 id="contact-title">Contact Us</h1>
+              <span>
+                At FutureSphere our mission is to empower individuals and
+                businesses through innovative technology solutions that enrich
+                lives, foster growth, and drive positive change.
+              </span>
+            </div>
+
+            <form className="contact-card">
+              <label>
+                Full Name
+                <input type="text" name="fullName" placeholder="John Doe" />
+              </label>
+              <label>
+                Email
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Johndoe@gmail.com"
+                />
+              </label>
+
+              <label className="message-label">
+                Message
+                <textarea name="message" placeholder="Type here..." rows="7" />
+              </label>
+
+              <button type="submit">Submit</button>
+            </form>
+
+            <div className="contact-channel-strip" aria-label="Contact channels">
+              {contactChannels.map((channel) => (
+                <article className="contact-channel" key={channel.email}>
+                  <span className="contact-channel-icon" aria-hidden="true">
+                    <channel.icon />
+                  </span>
+                  <div className="contact-channel-details">
+                    <p>{channel.title}</p>
+                    <a href={`mailto:${channel.email}`}>{channel.email}</a>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
-
-          <form className="contact-card">
-            <label>
-              Full Name
-              <input type="text" name="fullName" placeholder="John Doe" />
-            </label>
-            <label>
-              Email
-              <input
-                type="email"
-                name="email"
-                placeholder="Johndoe@gmail.com"
-              />
-            </label>
-
-            <label className="message-label">
-              Message
-              <textarea name="message" placeholder="Type here..." rows="7" />
-            </label>
-
-            <button type="submit">Submit</button>
-          </form>
-
-          <div className="contact-channel-strip" aria-label="Contact channels">
-            {contactChannels.map((channel) => (
-              <article className="contact-channel" key={channel.email}>
-                <span className="contact-channel-icon" aria-hidden="true">
-                  <channel.icon />
-                </span>
-                <div className="contact-channel-details">
-                  <p>{channel.title}</p>
-                  <a href={`mailto:${channel.email}`}>{channel.email}</a>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
+    </>
   );
 }

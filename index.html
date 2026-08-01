@@ -2,13 +2,77 @@
 <html lang="en">
 
 <head>
+  <!-- 1. Charset always first -->
   <meta charset="UTF-8" />
+
+  <!-- 2. Viewport always second -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CREW 360.AI</title>
+
+  <!-- 3. GTM preconnect before script -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin />
+
+  <!-- 4. Google Tag Manager Script -->
+  <!--
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  -->
+
+
+  <!-- 6. Static Canonical URL Fallback -->
+  <link rel="canonical" href="https://www.crew360.ai/" />
+
+  <!-- 7. Title -->
+  <title>CREW 360</title>
+
+  <!-- 8. Meta Description -->
+  <meta name="description" content="CREW 360 empowers modern airlines with real-time cabin crew evaluation, flight performance analytics, and digitized employee staff travel management." />
+
+  <!-- 9. Open Graph Tags -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.crew360.ai/" />
+  <meta property="og:title" content="CREW 360" />
+  <meta property="og:description" content="CREW 360 empowers modern airlines with real-time cabin crew evaluation, flight performance analytics, and digitized employee staff travel management." />
+  <meta property="og:image" content="https://www.crew360.ai/src/assets/Navbar/Logo.webp" />
+
+  <!-- 10. Google Fonts Preconnect & Stylesheet -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 
 <body>
-  <div id="root"></div>
+  <!-- GTM noscript fallback -->
+  <!--
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  -->
+
+  <!-- Crawler Fallback Content inside root div -->
+  <div id="root">
+    <header style="padding:20px;text-align:center;font-family:sans-serif;">
+      <h1 style="color:#003f6c;">CREW 360</h1>
+      <p>Digitizing airline crew performance management, flight evaluations, and staff travel privileges worldwide.</p>
+    </header>
+    <main style="padding:20px;max-width:800px;margin:0 auto;font-family:sans-serif;">
+      <section>
+        <h2>Our Solutions</h2>
+        <ul>
+          <li><strong>Crew 360:</strong> Real-time flight evaluations, performance analytics, and cabin crew management.</li>
+          <li><strong>MyStaffTravel:</strong> Self-service staff travel privileges, automated booking, and eligibility management.</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Contact Us</h2>
+        <p><strong>Email:</strong> info@crew360.ai</p>
+        <p><a href="/privacy-policy">Privacy Policy</a></p>
+      </section>
+    </main>
+  </div>
+
   <script type="module" src="/src/main.jsx"></script>
 </body>
+
 </html>

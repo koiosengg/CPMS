@@ -9,8 +9,8 @@ const footerLinks = [
   ],
   [
     { label: "Contact", path: "/contact" },
-    { label: "Privacy Policy", path: "/privacy" },
-    { label: "Terms and Condition", path: "/terms" },
+    { label: "Privacy Policy", path: "/privacy-policy" },
+    { label: "Terms and Condition", path: "/privacy-policy" },
   ],
 ];
 
@@ -139,7 +139,7 @@ export default function Footer() {
                 <a
                   href="https://www.koiostudio.com"
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   className="koiostudio-link"
                 >
                   Koiostudio
@@ -153,7 +153,7 @@ export default function Footer() {
                   className="footer-social-link"
                   key={social.label}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   aria-label={social.label}
                 >
                   <social.icon size={17} strokeWidth={2.2} />
