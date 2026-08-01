@@ -992,6 +992,12 @@ h3 {
   border-radius: 10px;
   border: 1px solid rgba(0, 170, 183, 0.2);
   background: rgba(0, 170, 183, 0.1);
+  color: #00A5B5;
+}
+
+.approach-icon.active svg {
+  color: #00A5B5;
+  stroke: #00A5B5;
 }
 
 .airline-choice-inner {
@@ -1587,14 +1593,25 @@ h3 {
 
 /* Feature Precision Section Base */
 .feature-precision-section {
-  background: rgba(235, 235, 235, 0.3);
+  background: rgba(235, 235, 235, 0.30);
   display: flex;
   justify-content: center;
   padding: 80px 20px;
 }
 
-.feature-precision-section.bg-white {
+.feature-precision-card {
   background: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f1f5f9;
+}
+
+.feature-precision-section.bg-white {
+  background: #ffffff !important;
 }
 
 .feature-section-inner {
@@ -1645,17 +1662,6 @@ h3 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-}
-
-.feature-precision-card {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-  border: 1px solid #f1f5f9;
 }
 
 .feature-card-icon {
@@ -1811,6 +1817,36 @@ h3 {
 
 .read-more-btn:hover {
   color: #00a6bc;
+}
+
+.read-more-btn .chevron-icon {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.read-more-btn .chevron-icon.expanded {
+  transform: rotate(180deg);
+}
+
+/* Expandable Content Smooth Transition */
+.expandable-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.3s ease,
+    margin-top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0;
+  overflow: hidden;
+  margin-top: -16px;
+}
+
+.expandable-content.expanded {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 0;
+}
+
+.expandable-content-inner {
+  min-height: 0;
 }
 
 /* Staff Overview Image */

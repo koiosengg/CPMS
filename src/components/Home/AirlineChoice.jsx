@@ -340,25 +340,25 @@ export default function AirlineChoice({
                 <div className="approaches-grid">
                   <div className="approach-item">
                     <span className="approach-icon active">
-                      <Users size={16} />
+                      <Users size={16} color="#00A5B5" />
                     </span>
                     <p>Dynamic Teams Across Flights</p>
                   </div>
                   <div className="approach-item">
                     <span className="approach-icon active">
-                      <RefreshCw size={16} />
+                      <RefreshCw size={16} color="#00A5B5" />
                     </span>
                     <p>Constantly Changing Supervisors</p>
                   </div>
                   <div className="approach-item">
                     <span className="approach-icon active">
-                      <Clock size={16} />
+                      <Clock size={16} color="#00A5B5" />
                     </span>
                     <p>Need for Real Time Insights</p>
                   </div>
                   <div className="approach-item">
                     <span className="approach-icon active">
-                      <MessageSquare size={16} />
+                      <MessageSquare size={16} color="#00A5B5" />
                     </span>
                     <p>Continuous Feedback & Support Expectations</p>
                   </div>

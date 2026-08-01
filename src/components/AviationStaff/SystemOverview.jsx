@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import systemImg from "../../assets/AviationStaff/System/image.webp";
 
 export default function SystemOverview() {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <section className="product-system-section staff-overview-section">
       <div className="product-system-inner">
@@ -29,9 +32,35 @@ export default function SystemOverview() {
               than forcing your business to fit the software.
             </p>
 
-            <button type="button" className="read-more-btn">
-              <span>Read More</span>
-              <ChevronDown size={24} />
+            <div className={`expandable-content ${isExpanded ? "expanded" : ""}`}>
+              <div className="expandable-content-inner">
+                <p>
+                  Designed for rapid deployment and enterprise-scale operations,
+                  myStaffTravel includes built-in connectors to leading airline
+                  systems, significantly reducing implementation effort and
+                  accelerating time-to-value. The platform supports multiple
+                  payment methods, integrates seamlessly with enterprise identity
+                  providers through Single Sign-On (SSO), and aligns with modern
+                  security, compliance, and architecture standards. Whether your
+                  objective is to improve employee experience, reduce
+                  administrative overhead, or modernize legacy staff travel
+                  processes, myStaffTravel delivers a secure, scalable, and
+                  future-ready solution that empowers employees while simplifying
+                  administration.
+                </p>
+              </div>
+            </div>
+
+            <button
+              type="button"
+              className="read-more-btn"
+              onClick={() => setIsExpanded(!isExpanded)}
+            >
+              <span>{isExpanded ? "Read Less" : "Read More"}</span>
+              <ChevronDown
+                size={24}
+                className={`chevron-icon ${isExpanded ? "expanded" : ""}`}
+              />
             </button>
           </div>
         </div>
