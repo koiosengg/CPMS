@@ -75,20 +75,19 @@ export default function Contact() {
             <form className="contact-card">
               <label>
                 Full Name
-                <input type="text" name="fullName" placeholder="John Doe" />
+                <input type="text" name="fullName" />
               </label>
               <label>
                 Email
                 <input
                   type="email"
                   name="email"
-                  placeholder="Johndoe@gmail.com"
                 />
               </label>
 
               <label className="message-label">
                 Message
-                <textarea name="message" placeholder="Type here..." rows="7" />
+                <textarea name="message" rows="7" />
               </label>
 
               <button type="submit">Submit</button>

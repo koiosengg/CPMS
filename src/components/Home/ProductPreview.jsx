@@ -1,33 +1,33 @@
-import GridSection from './GridSection';
-import aviation1 from '../../assets/Home/Aviation/1.webp';
-import aviation2 from '../../assets/Home/Aviation/2.webp';
-import aviation3 from '../../assets/Home/Aviation/3.webp';
-import aviation4 from '../../assets/Home/Aviation/4.webp';
+import GridSection from "./GridSection";
+import aviation1 from "../../assets/Home/Aviation/1.webp";
+import aviation2 from "../../assets/Home/Aviation/2.webp";
+import aviation3 from "../../assets/Home/Aviation/3.webp";
+import aviation4 from "../../assets/Home/Aviation/4.webp";
 
 const solutions = [
   {
     image: aviation1,
-    title: 'My Crew 360',
+    title: "MyCrew360",
     description:
-      "Co-developed with the world's leading cargo airlines and ground handlers, iCargo maximizes revenues, collaboration and cost-efficiencies across the value chain.",
+      "Transform crew administration, performance management, disciplinary workflows, appraisals, and employee engagement into a single intelligent platform.",
   },
   {
     image: aviation2,
-    title: 'My Staff Travel',
+    title: "My Staff Travel",
     description:
-      'With native NDC and offer and order management capabilities, iFly maximizes personalized retail opportunities across channels and traveler touchpoints and end-to-end passenger processing.',
+      "Modern staff travel solution designed for airlines to digitize and simplify the end-to-end employee travel experience. Configurable to your policies and processes, empowering your people and operations.",
   },
   {
     image: aviation3,
-    title: 'Aviation Data',
+    title: "Aviation Data Services",
     description:
-      'Intelligent and highly automated, iFlight provides dynamic situational awareness and streamlined processes for optimized operations, crew, and disruption management.',
+      "Pre-built data model coupled with Intelligent and highly automated services to provide dynamic situational awareness and streamlined processes for optimized operations, crew, and disruption management.",
   },
   {
     image: aviation4,
-    title: 'System Integration',
+    title: "System Integration Services ",
     description:
-      'Highly configurable, iLoyal maximizes member engagement revenues by accelerating value delivery through easy partner integration and agile offer deployment.',
+      "Team of experts coupled with pre-built connectors for common airline systems provide system integration services to help is any Airline system implementation projects.",
   },
 ];
 

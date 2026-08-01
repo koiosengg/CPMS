@@ -1593,7 +1593,9 @@ h3 {
 
 /* Feature Precision Section Base */
 .feature-precision-section {
-  background: rgba(235, 235, 235, 0.3);
+  background: #EEF2F6;
+  border-top: 1px solid #E0E6ED;
+  border-bottom: 1px solid #E0E6ED;
   display: flex;
   justify-content: center;
   padding: 80px 20px;
@@ -1607,11 +1609,13 @@ h3 {
   flex-direction: column;
   gap: 12px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-  border: 1px solid #f1f5f9;
+  border: 1px solid #e2e8f0;
 }
 
 .feature-precision-section.bg-white {
   background: #ffffff !important;
+  border-top: none !important;
+  border-bottom: none !important;
 }
 
 .feature-section-inner {

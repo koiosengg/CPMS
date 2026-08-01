@@ -361,7 +361,6 @@ export default function PrecisionFeatures({
   return (
     <section
       className={`feature-precision-section ${bgWhite ? "bg-white" : ""}`}
-      style={!bgWhite ? { background: "rgba(235, 235, 235, 0.30)" } : undefined}
       aria-labelledby="precision-title"
     >
       <div className="feature-section-inner">

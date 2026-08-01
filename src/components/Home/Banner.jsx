@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import Banner1 from "../../assets/Home/Banner/Banner1.webp";
 
 export default function Banner() {
@@ -18,11 +17,6 @@ export default function Banner() {
             Eliminate scheduling conflicts and improve operational efficiency
             with a centralized platform.
           </p>
-          <div className="banner-actions">
-            <NavLink className="hero-button primary" to="/contact">
-              Request Demo
-            </NavLink>
-          </div>
         </div>
 
         <div className="banner-media">
